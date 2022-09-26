@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Features and Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Some Basic Features Practice
+
+- **Counters** and **Counter** are two class component that I have used for practice. Here the following features are covered
+  - Basic State Usage
+  - Calling a Child Component
+  - Passing an event handler to child component
+  - Conditional Rendering
+  - Props Usage
+    In order to view this App.js should be.
+    It looks like the following ![image](./docs/couterAppBasic.png)
+
+```javascript
+import Counters from "./components/Counters";
+
+function App() {
+  return (
+    <div className="App">
+      <Counters />
+    </div>
+  );
+}
+```
+
+## UseEffect() Examples
+
+- **HookCounterOne** is the functional component representation of **ClassComponentOne** Class Counter. This represent the useEffect hook with different Lifecycle phases and it looks like ![image](./docs/HookCounterOne.png)
+  In order to view this App.js should be.
+
+```javascript
+import ClassComponentOne from "./components/ClassCounterOne";
+import HookCounterOne from "./components/HookCounterOne";
+
+function App() {
+  return (
+    <div className="App">
+      <ClassComponentOne />
+      <HookCounterOne />
+    </div>
+  );
+}
+```
+
+- **ToggleContentContainer** is the functional component representation that demonstrates **componentWillUnmount** in functional Component format. This represent the useEffect hook with different Lifecycle phases and it looks like ![image](./docs/toogle.png)
+  In order to view this App.js should be.
+
+```javascript
+import ToggleContentContainer from "./components/ToggleContentContainer";
+
+function App() {
+  return (
+    <div className="App">
+      <ToggleContentContainer></ToggleContentContainer>
+    </div>
+  );
+}
+```
+
+- **Interval Hook Counter** is the functional component representation of **IntervalClassCounter** Class Counter. This represent the useEffect hook with different Lifecycle phases and it looks like ![image](./docs/InterVal%20Counter.png)
+  In order to view this App.js should be.
+
+```javascript
+import IntervalClassCounter from "./components/IntervalClassCounter";
+import IntervalHookCounter from "./components/IntervalHookCounter";
+
+function App() {
+  return (
+    <div className="App">
+      <IntervalClassCounter></IntervalClassCounter>
+      <IntervalHookCounter></IntervalHookCounter>
+    </div>
+  );
+}
+```
+
+- Here we will showing how to **fetch data from an API endpoint** using **useEffect** Hook. We will be using **axios** for data-fetching
+
+```cmd
+    npm install axios
+```
+
+    We have the following implementations Done:
+
+1.  **ExtractAllData** which extracts all data from the api https://jsonplaceholder.typicode.com/posts
+2.  **ExtractDataOnChange** which extracts data with specified id from the api https://jsonplaceholder.typicode.com/posts/1 on change of the input field
+3.  **ExtractDataOnBtnClick** which extracts data with specified id from the api https://jsonplaceholder.typicode.com/posts/1 on click of button
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm install`
+
+To Install the dependency
+
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

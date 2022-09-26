@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Counters from "./components/Counters";
+import ClassComponentOne from "./components/ClassCounterOne";
+import HookCounterOne from "./components/HookCounterOne";
+import ButtonContainer from "./components/ToggleContentContainer";
+import ToggleContentContainer from "./components/ToggleContentContainer";
+import IntervalClassCounter from "./components/IntervalClassCounter";
+import IntervalHookCounter from "./components/IntervalHookCounter";
+import DataFetching from "./components/axiosDemo/ExtractDataOnBtnClick";
+import ExtractAllData from "./components/axiosDemo/ExtractAllData";
+import ExtractDataOnBtnClick from "./components/axiosDemo/ExtractDataOnBtnClick";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ClassComponentOne /> */}
+      {/* <HookCounterOne /> */}
+      {/* <ToggleContentContainer></ToggleContentContainer> */}
+      {/* <IntervalClassCounter></IntervalClassCounter>
+      <IntervalHookCounter></IntervalHookCounter> */}
+      <ExtractDataOnBtnClick></ExtractDataOnBtnClick>
+      {/* <ExtractAllData></ExtractAllData> */}
     </div>
   );
 }
