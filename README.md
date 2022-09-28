@@ -101,3 +101,46 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## useContext() Examples
+
+In order to view this App.js should be.
+
+```javascript
+import logo from "./logo.svg";
+import React, { Component } from "react";
+import ComponentC from "./components/useContextDemo/ComponentC";
+
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
+
+function App() {
+  return (
+    <div className="App">
+      <UserContext.Provider value={"Viswas"}>
+        <ChannelContext.Provider value={"CodeEvaluation"}>
+          <ComponentC></ComponentC>
+        </ChannelContext.Provider>
+      </UserContext.Provider>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## useReducer() Examples
+
+There are 3 implementations
+
+- **CounterOne** is the basic example of useReducer
+- **CounterTwo** is another advanced option where we use two initial state to manage 2 counter
+- **CounterThree** we have used 2 useReducer to manage 2 counter
+
+## useReducer with useContext
+
+We want share state between components(**_Global State Management_**). So here we will be using **useReducer** with **useContext**.
+
+Lets consider a scenario. We have **app.js** and on different levels we have different components. Our requirement is to share a counter state between components A, D and F. We will maintain the counter state in **app.js** but we share the state and the methods to change the state deep down in the component tree. Passings props through so many steps is definitely a bad idea. So we will be using **contextAPI**.
+
+![image](./docs/useContextWithuseReducer.png)
